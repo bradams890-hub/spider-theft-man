@@ -1,0 +1,52 @@
+{
+  "controls": [
+    {
+      "id": "attach_release",
+      "key": "F7",
+      "virtual_key": 118,
+      "native": "IS_GAME_KEYBOARD_KEY_JUST_PRESSED",
+      "behavior": "On foot: attach to the nearest valid camera-aimed surface; while attached, release and keep momentum.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    },
+    {
+      "id": "zip",
+      "key": "F8",
+      "virtual_key": 119,
+      "native": "IS_GAME_KEYBOARD_KEY_PRESSED",
+      "behavior": "While held and tethered: accelerate toward the anchor and reel in the rope.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    },
+    {
+      "id": "forward",
+      "key": "W",
+      "virtual_key": 87,
+      "native": "IS_GAME_KEYBOARD_KEY_PRESSED",
+      "behavior": "Swing pump and wall-run direction.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    },
+    {
+      "id": "left",
+      "key": "A",
+      "virtual_key": 65,
+      "native": "IS_GAME_KEYBOARD_KEY_PRESSED",
+      "behavior": "Steer the swing left.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    },
+    {
+      "id": "right",
+      "key": "D",
+      "virtual_key": 68,
+      "native": "IS_GAME_KEYBOARD_KEY_PRESSED",
+      "behavior": "Steer the swing right.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    },
+    {
+      "id": "wallrun_jump",
+      "key": "SPACE",
+      "virtual_key": 32,
+      "native": "IS_GAME_KEYBOARD_KEY_JUST_PRESSED",
+      "behavior": "While moving forward on foot, start a wall-run assist beside a detected wall; tap again to jump away.",
+      "verification": "Key code is a deliberate prototype binding; native signature is in the pinned GTA IV definition sheet."
+    }
+  ]
+}

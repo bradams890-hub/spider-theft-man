@@ -1,0 +1,4 @@
+Liberty Web Traversal — local prototype
+Copy this CLEO folder into a GTA IV Complete Edition 1.2.0.59 install with CLEO Redux and an ASI loader already installed.
+This package contains no game files or runtime loader. Launch in offline Story Mode.
+Keys: F7 attach/release, hold F8 to zip, W/A/D steer, W + Space beside a wall for wall-run assist.

@@ -1,0 +1,19 @@
+{
+  "source": "https://raw.githubusercontent.com/sannybuilder/library/master/gta_iv/gta_iv.json",
+  "runtime_api_source": "https://github.com/cleolibrary/CLEO-Redux/blob/master/docs/en/api.md",
+  "natives": [
+    {"id":"get_player_char","name":"GET_PLAYER_CHAR","inputs":["playerId:Player"],"outputs":["char:Char"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"get_game_cam","name":"GET_GAME_CAM","inputs":[],"outputs":["cam:Camera"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"get_cam_pos","name":"GET_CAM_POS","inputs":["cam:Camera"],"outputs":["x:float","y:float","z:float"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"get_cam_rot","name":"GET_CAM_ROT","inputs":["cam:Camera"],"outputs":["angleX:float","angleY:float","angleZ:float"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"cam_is_sphere_visible","name":"CAM_IS_SPHERE_VISIBLE","inputs":["cam:Camera","x:float","y:float","z:float","radius:float"],"outputs":["boolean"],"status":"verified-in-GTA-IV-definition;environment-occlusion-only"},
+    {"id":"get_char_coordinates","name":"GET_CHAR_COORDINATES","inputs":["char:Char"],"outputs":["x:float","y:float","z:float"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"get_char_velocity","name":"GET_CHAR_VELOCITY","inputs":["char:Char"],"outputs":["x:float","y:float","z:float"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"set_char_velocity","name":"SET_CHAR_VELOCITY","inputs":["char:Char","x:float","y:float","z:float"],"outputs":[],"status":"verified-in-GTA-IV-definition"},
+    {"id":"get_char_heading","name":"GET_CHAR_HEADING","inputs":["char:Char"],"outputs":["heading:float"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"is_char_dead","name":"IS_CHAR_DEAD","inputs":["char:Char"],"outputs":["boolean"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"is_char_on_foot","name":"IS_CHAR_ON_FOOT","inputs":["char:Char"],"outputs":["boolean"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"keyboard_pressed","name":"IS_GAME_KEYBOARD_KEY_PRESSED","inputs":["key:Key"],"outputs":["boolean"],"status":"verified-in-GTA-IV-definition"},
+    {"id":"keyboard_just_pressed","name":"IS_GAME_KEYBOARD_KEY_JUST_PRESSED","inputs":["key:Key"],"outputs":["boolean"],"status":"verified-in-GTA-IV-definition"}
+  ]
+}

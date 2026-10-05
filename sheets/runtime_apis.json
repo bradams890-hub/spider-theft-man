@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/cleolibrary/CLEO-Redux/blob/master/docs/en/api.md",
+  "runtime_apis": [
+    {"id":"native_call","name":"native(command_name, ...args)","status":"verified-in-CLEO-Redux-api","use":"Call GTA IV natives and retrieve documented scalar/object/boolean outputs."},
+    {"id":"show_text_box","name":"showTextBox(text)","status":"verified-in-CLEO-Redux-api","use":"Show the tutorial and traversal state prompts."},
+    {"id":"log","name":"log(...values)","status":"verified-in-CLEO-Redux-api","use":"Record script start and mechanic state changes in cleo_redux.log."},
+    {"id":"async_wait","name":"asyncWait(timeInMs)","status":"verified-in-CLEO-Redux-api","use":"Yield the main loop between GTA IV ticks."},
+    {"id":"host_version","name":"CLEO.hostVersion","status":"verified-in-CLEO-Redux-api","use":"Record the detected GTA IV version at script startup."},
+    {"id":"date_now","name":"Date.now()","status":"ECMAScript-runtime-api","use":"Measure elapsed time for velocity integration and wall-run duration."}
+  ]
+}

@@ -1,0 +1,4 @@
+Build status: generated and syntax-checked.
+Launch attempt: user-approved start opened Rockstar Launcher, but GTAIV exited before gameplay; no CLEO or ASI log appeared.
+Gameplay status: not tested in-game. Native UI control was unavailable, and no free-roam Story Mode save was found in the standard locations checked.
+Do not describe this build as gameplay-tested until attach, swing, zip, wall-run, and waypoint traversal have been observed in Story Mode.

@@ -1,0 +1,44 @@
+{
+  "systems": [
+    {
+      "id": "tether_swing",
+      "goal": "Attach to a nearby building surface along the camera aim ray, then use GTA IV velocity with a spring tether to create pendulum-like movement.",
+      "control_refs": ["attach_release", "forward", "left", "right"],
+      "native_refs": ["get_player_char", "get_game_cam", "get_cam_pos", "get_cam_rot", "cam_is_sphere_visible", "get_char_coordinates", "get_char_velocity", "set_char_velocity", "get_char_heading", "is_char_dead", "is_char_on_foot", "keyboard_just_pressed", "keyboard_pressed"],
+      "runtime_refs": ["native_call", "show_text_box", "log", "async_wait", "date_now"],
+      "parameter_refs": ["hook_scan_start_m", "hook_max_range_m", "hook_scan_step_m", "hook_min_height_delta_m", "anchor_clearance_m", "anchor_visibility_radius_m", "anchor_bisection_iterations", "rope_min_length_m", "rope_max_length_m", "tether_stiffness", "tether_max_acceleration", "radial_damping", "swing_pump_acceleration", "release_impulse_mps", "max_frame_seconds"],
+      "failure_behavior": "If the camera ray has no valid occluded point above the player, show an aim-at-a-building prompt and do not attach.",
+      "verification_basis": "Uses documented CLEO Redux native calls; anchor visibility and velocity feel require in-game validation."
+    },
+    {
+      "id": "web_zip",
+      "goal": "While attached, holding the zip key accelerates toward the anchor and reels in the tether without teleporting.",
+      "control_refs": ["zip"],
+      "native_refs": ["get_char_coordinates", "get_char_velocity", "set_char_velocity", "keyboard_pressed"],
+      "runtime_refs": ["native_call", "async_wait", "date_now"],
+      "parameter_refs": ["zip_acceleration", "zip_retract_mps", "zip_speed_limit_mps", "rope_min_length_m", "max_frame_seconds"],
+      "failure_behavior": "Ignore zip input when no tether is active.",
+      "verification_basis": "Uses documented GTA IV velocity natives; acceleration and reeling values require in-game validation."
+    },
+    {
+      "id": "wall_run_assist",
+      "goal": "When the player moves forward and jumps near a side wall, briefly preserve forward movement and upward momentum; a second jump input kicks away from the wall.",
+      "control_refs": ["wallrun_jump", "forward"],
+      "native_refs": ["get_game_cam", "get_cam_pos", "get_cam_rot", "cam_is_sphere_visible", "get_char_coordinates", "get_char_velocity", "set_char_velocity", "get_char_heading", "is_char_dead", "is_char_on_foot", "keyboard_just_pressed", "keyboard_pressed"],
+      "runtime_refs": ["native_call", "show_text_box", "log", "async_wait", "date_now"],
+      "parameter_refs": ["wall_run_duration_ms", "wall_run_speed_mps", "wall_run_upward_velocity_mps", "wall_run_side_probe_m", "wall_run_height_m", "wall_run_probe_radius_m", "wall_run_jump_impulse_mps", "wall_run_up_impulse_mps", "minimum_forward_speed_mps", "max_frame_seconds"],
+      "failure_behavior": "If neither side probe indicates a nearby wall, do nothing and preserve normal GTA IV controls.",
+      "verification_basis": "Uses documented camera visibility and velocity natives; the visibility probe is an approximation and requires in-game validation."
+    },
+    {
+      "id": "first_minute_trial",
+      "goal": "Teach a player to reach a rooftop, set a GTA IV map waypoint on a street, attach to a building, zip, and use a wall-run assist.",
+      "control_refs": ["attach_release", "zip", "forward", "left", "right", "wallrun_jump"],
+      "native_refs": [],
+      "runtime_refs": ["show_text_box", "log", "async_wait", "host_version"],
+      "parameter_refs": ["tutorial_message"],
+      "failure_behavior": "This slice does not spawn the player on a roof or create a mission waypoint; the player uses a Story Mode save and GTA IV's normal map waypoint.",
+      "verification_basis": "The tutorial is a short control prompt; it must be reviewed after observing it in the running game."
+    }
+  ]
+}
